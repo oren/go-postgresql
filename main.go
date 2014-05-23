@@ -17,7 +17,7 @@ func main() {
 	for rows.Next() {
 		err := rows.Scan(&title, &author, &description)
 		PanicIf(err)
-		fmt.Printf("Title: %s\nAuthor: %s\nDescription: %s\n\n", title, author, description)
+		fmt.Println("Title: %s\nAuthor: %s\nDescription: %s\n\n", title, author, description)
 	}
 }
 func PanicIf(err error) {
